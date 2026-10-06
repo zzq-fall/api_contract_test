@@ -1,0 +1,91 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.4
+    method: GET
+    uri: http://127.0.0.1:9000/api/users?page=1
+  response:
+    body:
+      string: "{\"code\": 0, \"data\": {\"page\": 1, \"total\": 2, \"items\": [{\"id\":
+        1, \"name\": \"\u5F20\u4F1F\", \"email\": \"zhangwei@example.com\", \"age\":
+        25}, {\"id\": 2, \"name\": \"\u674E\u5A1C\", \"email\": \"lina@example.com\",
+        \"age\": 28}]}}"
+    headers:
+      Content-Length:
+      - '197'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 06 Oct 2026 06:55:08 GMT
+      Server:
+      - BaseHTTP/0.6 Python/3.8.10
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.4
+    method: GET
+    uri: http://127.0.0.1:9000/api/users/1
+  response:
+    body:
+      string: "{\"code\": 0, \"data\": {\"id\": 1, \"name\": \"\u5F20\u4F1F\", \"email\":
+        \"zhangwei@example.com\", \"age\": 25}}"
+    headers:
+      Content-Length:
+      - '92'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 06 Oct 2026 06:55:08 GMT
+      Server:
+      - BaseHTTP/0.6 Python/3.8.10
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.4
+    method: GET
+    uri: http://127.0.0.1:9000/api/users/2
+  response:
+    body:
+      string: "{\"code\": 0, \"data\": {\"id\": 2, \"name\": \"\u674E\u5A1C\", \"email\":
+        \"lina@example.com\", \"age\": 28}}"
+    headers:
+      Content-Length:
+      - '88'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 06 Oct 2026 06:55:08 GMT
+      Server:
+      - BaseHTTP/0.6 Python/3.8.10
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserListContract",
+  "description": "查询用户列表接口响应契约",
+  "type": "object",
+  "required": ["code", "data"],
+  "properties": {
+    "code": { "type": "integer" },
+    "data": {
+      "type": "object",
+      "required": ["page", "total", "items"],
+      "properties": {
+        "page": { "type": "integer" },
+        "total": { "type": "integer" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "email", "age"],
+            "properties": {
+              "id": { "type": "integer" },
+              "name": { "type": "string" },
+              "email": { "type": "string", "format": "email" },
+              "age": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "契约1: 查询用户列表-第1页",
+    "method": "GET",
+    "url": "/api/users",
+    "params": {"page": 1},
+    "schema": "schemas/user_list_schema.json",
+    "sla": true
+  },
+  {
+    "name": "契约2: 查询单个用户-存在",
+    "method": "GET",
+    "url": "/api/users/1",
+    "schema": "schemas/user_detail_schema.json",
+    "sla": true,
+    "jsonpath": {"$.data.id": 1}
+  },
+  {
+    "name": "契约3: 查询单个用户-存在(id=2)",
+    "method": "GET",
+    "url": "/api/users/2",
+    "schema": "schemas/user_detail_schema.json",
+    "sla": true,
+    "jsonpath": {"$.data.id": 2}
+  }
+]
