@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-契约测试组件（业务层）。
-对应简历项目② APITestka：扩展 JSON Schema / JSONPath / 响应时间 SLA 断言验证接口契约与性能。
+契约测试组件
+APITestka：扩展 JSON Schema / JSONPath / 响应时间 SLA 断言验证接口契约与性能
 """
 import json
 
@@ -45,4 +45,4 @@ class ContractAssert:
         assert isinstance(val, expect_type_map.get(expect_type, str)), \
             f"{msg}失败: 字段 {field} 期望类型 {expect_type}, 实际 {type(val).__name__}"
         print(f"[ASSERT] {msg}通过: 字段 {field} 类型为 {expect_type}")
-#（注：内容由AI生成）
+

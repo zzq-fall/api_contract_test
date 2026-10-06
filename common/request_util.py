@@ -34,4 +34,3 @@ class RequestUtil:
 
     def post(self, url, **kwargs):
         return self.send("POST", url, **kwargs)
-#（注：内容由AI生成）

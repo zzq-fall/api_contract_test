@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-本地 Mock 服务器（业务层，纯 Python 标准库）。
-用于契约测试 / SLA 测试 / VCR 录放的本地被测系统。
-【注意】DB 用户数据必须包含 age 字段，与 data/schemas/*.json 契约保持一致，
-否则 JSON Schema 契约校验会报 "age is a required property"。
-
+本地 Mock 服务器
+用于契约测试/SLA 测试/VCR录放的本地被测系统。
 启动: python scripts/mock_server.py    默认监听 127.0.0.1:9000
 """
 import json

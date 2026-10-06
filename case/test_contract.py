@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-契约测试（Contract Testing）。
-对应简历项目② APITestka 的契约 / 性能断言能力：
-1. 从 JSON 数据驱动文件读取用例，0 代码新增契约用例
-2. JSON Schema 校验响应结构是否符合契约（json-schema 校验）
-3. JSONPath 字段断言
-4. 响应时间 SLA 断言（性能）
-5. VCR 录放：录制真实交互，回放时离线复用 cassette，提升稳定性
-6. OpenAPI 契约：演示从 OpenAPI 规范导入接口定义
+契约测试
+1. 从JSON数据驱动文件读取用例，0代码新增契约用例
+2. JSON Schema校验响应结构是否符合契约（json-schema校验）
+3. JSONPath字段断言
+4. 响应时间SLA断言
+5. VCR录放：录制真实交互，回放时离线复用 cassette，提升稳定性
+6. OpenAPI契约：演示从 OpenAPI 规范导入接口定义
 
 数据驱动文件：data/contract_cases.json
 契约文件：data/schemas/*.json
@@ -29,7 +28,7 @@ OPENAPI_FILE = os.path.join(BASE_DIR, "data", "openapi.yaml")
 
 
 def _load_contract_cases():
-    """读取 JSON 数据驱动的契约用例。"""
+    """读取 JSON 数据驱动的契约用例"""
     with open(DATA_FILE, encoding="utf-8") as f:
         return json.load(f)
 
@@ -125,4 +124,3 @@ def test_openapi_contract():
     }
     with allure.step("OpenAPI 派生契约校验"):
         ContractAssert.schema(resp.json(), contract)
-#（注：内容由AI生成）

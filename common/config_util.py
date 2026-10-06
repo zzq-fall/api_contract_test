@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""配置文件读取封装：读取 conf/conf.ini 中的配置。"""
+"""配置文件读取封装：读取 conf/conf.ini 中的配置"""
 import configparser
 import os
 
@@ -8,7 +8,7 @@ CONF_PATH = os.path.join(BASE_DIR, "conf", "conf.ini")
 
 
 class ConfigUtil:
-    """conf.ini 配置读取工具（业务层封装）。"""
+    """conf.ini 配置读取工具"""
 
     _conf = None
 
@@ -37,4 +37,3 @@ class ConfigUtil:
     @classmethod
     def sla_ms(cls) -> int:
         return int(cls.get("assert", "sla_ms", "3000"))
-#（注：内容由AI生成）
