@@ -1,12 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-项目执行入口（契约测试）：
-    1. 启动本地 mock 服务器（可选，--mock）
-    2. 运行 pytest 契约测试，生成 allure 结果
-用法：
-    python run.py            # 仅执行测试
-    python run.py --mock     # 先启动 mock 再执行
-"""
 import os
 import subprocess
 import sys
